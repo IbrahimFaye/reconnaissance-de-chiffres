@@ -1,0 +1,9 @@
+1 base
+accuracy: 0.978
+
+2 dataAug
+accuracy: 0.9851999878883362
+
+3 Batch Normalization
+accuracy: 0.9937000274658203
+
