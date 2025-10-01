@@ -36,7 +36,7 @@ if st.button("Prédire"):
         confidence = np.max(pred)
 
         threshold = 0.87
-        st.write(f"### : **confiance  {confidence:.2%}**")
+        st.write(f"###  **confiance  {confidence:.2%}**")
 
         if confidence < threshold:
             st.warning("🤔 Je ne suis pas sûr... (confiance  faible) Vous pouvez améliorer  votre écriture svp")
