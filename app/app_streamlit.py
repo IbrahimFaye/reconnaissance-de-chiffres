@@ -3,8 +3,9 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 from streamlit_drawable_canvas import st_canvas
-
-model = tf.keras.models.load_model("mnist_cnn.h5")
+import os
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "mnist_cnn.h5")
+model = tf.keras.models.load_model(MODEL_PATH)
 
 st.title("🎨 Reconnaissance de Chiffres MNIST avec CNN")
 st.write("Dessine un chiffre (0-9) dans la zone ci-dessous et le modèle le reconnaîtra.")
