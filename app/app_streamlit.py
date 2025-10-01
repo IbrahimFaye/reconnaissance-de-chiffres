@@ -33,6 +33,13 @@ if st.button("Prédire"):
 
         pred = model.predict(img_array)
         predicted_digit = np.argmax(pred)
+        confidence = np.max(pred)
 
-        st.write(f"### ✅ Le modèle prédit : **{predicted_digit}**")
+        threshold = 0.87
+        st.write(f"### : **confiance  {confidence:.2%}**")
+
+        if confidence < threshold:
+            st.warning("🤔 Je ne suis pas sûr... (confiance  faible) Vous pouvez améliorer  votre écriture svp")
+        else:
+            st.write(f"### ✅ Le modèle prédit : **{predicted_digit}**")
         st.image(img.resize((140,140)), caption="Image entrée", width=140)
